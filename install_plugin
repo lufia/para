@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+dir=./lib
+base_url=https://oss.sonatype.org/service/local/repositories/releases/content/com/erudika
+
+usage()
+{
+	echo usage: $(basename $0) [-d dir] [file ...] >&2
+	exit 1
+}
+
+while getopts :d: OPT
+do
+	case $OPT in
+	d)	dir=$OPTARG ;;
+	*)	usage ;;
+	esac
+done
+shift $((OPTIND - 1))
+
+egrep -v '^(#|[ 	]*$)' "$@" |
+while read s
+do
+	plugin=${s%:*}
+	version=${s#*:}
+	curl -sL $base_url/$plugin/$version/$plugin-$version-shaded.jar >"$dir/$plugin.jar" || exit 2
+done
