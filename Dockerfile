@@ -1,5 +1,5 @@
 FROM openjdk:8-jre
-MAINTAINER kadota <kadota@fenrir.co.jp>
+MAINTAINER lufia <lufia@lufia.org>
 
 ENV	VERSION=1.25.2 \
 	ARCHIVE_URL=https://oss.sonatype.org/service/local/repositories/releases/content/com/erudika
