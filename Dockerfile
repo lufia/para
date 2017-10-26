@@ -1,7 +1,7 @@
 FROM openjdk:8-jre
 MAINTAINER lufia <lufia@lufia.org>
 
-ENV	VERSION=1.25.2 \
+ENV	VERSION=1.25.4 \
 	ARCHIVE_URL=https://oss.sonatype.org/service/local/repositories/releases/content/com/erudika
 
 RUN	useradd -s /bin/rbash -u 10000 para && \
