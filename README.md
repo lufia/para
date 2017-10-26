@@ -1,10 +1,10 @@
 # para
-Dockerized Para
+Dockerized [Para](https://github.com/Erudika/para)
 
 ## Use
 
 ```console
-$ docker run --rm -e PARA_ENV=production para/latest
+$ docker run --rm -e PARA_ENV=production lufia/para:latest
 ```
 
 see also [Para docs](http://paraio.org/docs/).
