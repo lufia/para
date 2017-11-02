@@ -44,7 +44,7 @@ function get_key()
 }
 
 echo 'para.plugin_folder = "lib/"' >$config
-env | sed -n '/^PARA_/s/=.*//p' | while read v
+env | sed -n '/^PARA_/s/=.*//p' | sort | while read v
 do
 	key=$(get_key $v)
 	if [[ -z $key ]]
