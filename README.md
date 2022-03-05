@@ -1,6 +1,8 @@
 # para
 Dockerized [Para](https://github.com/Erudika/para)
 
+**I recommend to use official Docker image: [erudikaltd/scoold](https://hub.docker.com/r/erudikaltd/scoold/)**
+
 ## Use
 
 ```console
